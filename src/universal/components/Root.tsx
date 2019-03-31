@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import styled from 'styled-components';
 
-import Body from '@@components/Body';
+import BodyContainer from '@@components/BodyContainer';
 
 const StyledRoot = styled.div`
   border: 1px solid black;
@@ -37,7 +37,7 @@ const Root = ({
   return (
     <StyledRoot>
       <BlackBar label={'Gitki'} />
-      <Body />
+      <BodyContainer />
       <BlackBar label={'Elden presents'} />
     </StyledRoot>
   );

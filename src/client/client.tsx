@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 import ClientApp from './ClientApp';
+import config from '@@src/config';
 
 (function setBabelPolyfill() {
   if ((typeof window !== 'undefined' && !window['_babelPolyfill']) 

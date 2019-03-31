@@ -6,26 +6,43 @@ const StyledBody = styled.div`
 `;
 
 const Dropdown = ({
-  value,
-  values,
+  handleChangeDropdown,
+  user,
+  users,
 }) => {
+  const _users = users && users.map((user) => {
+    return (
+      <option 
+        key={user.username}
+        value={user.username}
+      >
+        {user.username}
+      </option>
+    );
+  });
+  
   return (
-    <select value={value}>
+    <select 
+      onChange={handleChangeDropdown}
+      value={user}
+    >
       <option value="default" disabled>Select user</option>
-      <option value="">power</option>
-      <option value="">temp</option>
+      {_users}
     </select>
   );
 };
 
 const Body = ({
+  handleChangeDropdown,
+  user = 'default',
   users,
 }) => {
   return (
     <StyledBody>
       <Dropdown
-        value={'default'}
-        values={users}
+        handleChangeDropdown={handleChangeDropdown}
+        user={user}
+        users={users}
       />
     </StyledBody>
   );

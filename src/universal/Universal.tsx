@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 
+import config from '@@src/config';
 import GlobalStyle from '@@components/GlobalStyle';
 import Header from '@@components/Header';
 import Root from '@@components/Root';
