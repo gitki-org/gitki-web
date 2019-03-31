@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/launch.js",
+    "start:stage": "NODE_ENV=stage node src/launch.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -26,7 +27,8 @@
     "@babel/register": "^7.4.0",
     "@types/node": "^11.12.2",
     "babel-plugin-styled-components": "^1.10.0",
-    "react-hot-loader": "^4.8.2"
+    "react-hot-loader": "^4.8.2",
+    "webpack": "^4.29.6"
   },
   "dependencies": {
     "@nodekit/express-isomorphic": "^0.4.0",
