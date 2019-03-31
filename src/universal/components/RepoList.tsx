@@ -6,15 +6,22 @@ import styled from 'styled-components';
 const StyledRepoList = styled.div`
 `;
 
+const StyledRepo = styled.div`
+  border: 1px solid green;
+  height: 45px;
+`;
+
 const Repo: React.FC = ({
   repo,
 }) => {
-  console.log(123, repo);
   return (
-    <div>
-      <p>{repo.orgName}</p>
-      <p>{repo.repoName}</p>
-    </div>
+    <StyledRepo>
+      <div>
+        <span>{repo.timestamp}</span>
+      </div>
+      <span>{repo.orgName}</span>
+      <span>{repo.repoName}</span>
+    </StyledRepo>
   );
 };
 

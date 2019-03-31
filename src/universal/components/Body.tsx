@@ -3,37 +3,12 @@ import { Route, Switch, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 import RepoListContainer from '@@components/RepoListContainer';
+import Upper from '@@components/Upper';
 
 const StyledBody = styled.div`
   flex-grow: 1;
+  overflow-y: scroll;
 `;
-
-const Dropdown = ({
-  handleChangeDropdown,
-  user,
-  users,
-}) => {
-  const _users = users && users.map((user) => {
-    return (
-      <option 
-        key={user.username}
-        value={user.username}
-      >
-        {user.username}
-      </option>
-    );
-  });
-  
-  return (
-    <select 
-      onChange={handleChangeDropdown}
-      value={user}
-    >
-      <option value="default" disabled>Select user</option>
-      {_users}
-    </select>
-  );
-};
 
 const Body = ({
   handleChangeDropdown,
@@ -42,13 +17,13 @@ const Body = ({
 }) => {
   return (
     <StyledBody>
-      <Dropdown
+      <Upper 
         handleChangeDropdown={handleChangeDropdown}
         user={user}
         users={users}
       />
       <Switch>
-        <Route path="/add" component={() => 44} />
+        <Route path="/add" component={() => 'add'} />
         <Route component={RepoListContainer} />
       </Switch>
     </StyledBody>

@@ -1,7 +1,7 @@
-import axios from 'axios';
 import React from 'react';
 import styled from 'styled-components';
 
+import Axios from '@@modules/Axios';
 import Body from '@@components/Body';
 import config from '@@src/config';
 
@@ -12,10 +12,8 @@ const BodyContainer = ({
 
   React.useEffect(
     () => {
-      console.log('[axios] fetching...')
-      axios.post(`${config.dbEndPoint}/users`)
+      Axios.post(`${config.dbEndPoint}/users`)
         .then(({ data }) => {
-          console.log('[axios] users', data);
           setUsers(data.users);
         });
       return () => {};
