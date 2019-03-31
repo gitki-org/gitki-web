@@ -1,5 +1,8 @@
 import React, { useState, useMemo } from 'react';
+import { Route, Switch, NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+
+import RepoListContainer from '@@components/RepoListContainer';
 
 const StyledBody = styled.div`
   flex-grow: 1;
@@ -44,6 +47,10 @@ const Body = ({
         user={user}
         users={users}
       />
+      <Switch>
+        <Route path="/add" component={() => 44} />
+        <Route component={RepoListContainer} />
+      </Switch>
     </StyledBody>
   );
 };

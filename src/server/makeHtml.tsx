@@ -26,6 +26,7 @@ const makeHtml: MakeHtml = async function ({
   const element = (
     <ServerApp
       renderUniversal={Universal}
+      requestUrl={requestUrl}
       universalState={universalState}
     />
   );

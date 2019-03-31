@@ -11,6 +11,7 @@ module.exports = {
       "module-resolver", {
         "alias": {
           "@@components": "./src/universal/components",
+          "@@modules": "./src/universal/modules",
           "@@src": "./src",
         },
       }
