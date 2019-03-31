@@ -25,12 +25,15 @@
     "@babel/preset-typescript": "^7.3.3",
     "@babel/register": "^7.4.0",
     "@types/node": "^11.12.2",
+    "babel-plugin-styled-components": "^1.10.0",
     "react-hot-loader": "^4.8.2"
   },
   "dependencies": {
     "@nodekit/express-isomorphic": "^0.4.0",
+    "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.2.0"
   }
 }

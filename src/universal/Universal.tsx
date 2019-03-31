@@ -1,35 +1,18 @@
 import React, { useState, useMemo } from 'react';
 
-import Header from './components/Header';
-import TransferredState from './components/TransferredState';
+import GlobalStyle from '@@components/GlobalStyle';
+import Header from '@@components/Header';
+import Root from '@@components/Root';
+import TransferredState from '@@components/TransferredState';
 import UniversalContext from './contexts/UniversalContext';
 
 const Universal: UniversalType = ({
-  addPath,
-  children,
 }) => {
-  const [ count, setCount ] = React.useState(0);
-
-  const handleClickButton = useMemo(
-    () => {
-      return () => {
-        setCount(count + 1);
-      };
-    },
-    [count],
-  );
-
   return (
-    <div>
-      <Header />
-      <div>
-        <p>[count]</p>
-        <p>{count}</p>
-        <button onClick={handleClickButton}>add</button>
-      </div>
-      <TransferredState />
-      {children}
-    </div>
+    <>
+      <GlobalStyle />
+      <Root />
+    </>
   );
 };
 

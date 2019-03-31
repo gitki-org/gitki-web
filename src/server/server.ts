@@ -19,7 +19,7 @@ const extend: Extend = (app, state) => {
     res.locals.headers = req.headers;
     next();
   });
-}
+};
 
 const { localServer, server, eject } = ExpressIsomorphic.create({
   extend,
@@ -35,16 +35,7 @@ const { localServer, server, eject } = ExpressIsomorphic.create({
 const port = 6234;
 
 const httpServer = http.createServer(localServer().app);
-// const httpServer = http.createServer(server().app);
 
 httpServer.listen(port, () => {
   console.log(`Listening on ${port}`);
 });
-
-// eject({
-//   ejectPath: paths.distEject,
-// });
-
-export interface Locals {
-  headers: object;
-}

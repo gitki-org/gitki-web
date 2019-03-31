@@ -13,6 +13,14 @@
     ],
     "module": "commonjs",
     "moduleResolution": "node",
+    "paths": {
+      "@@components/*": [
+        "src/universal/components/*"
+      ],
+      "@@src/*": [
+        "src/*"
+      ],
+    },
     "strictNullChecks": true,
     "target": "es6"
   },
